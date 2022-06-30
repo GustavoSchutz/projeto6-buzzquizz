@@ -10,3 +10,7 @@ function writeQuizzlist(quizzList) {
     console.log(quizzList.data);
 }
 getQuizzlist()
+function paginaQuizz(){
+    let tela1 = document.getElementById("tela1");
+    tela1.classList.toggle("escondido");
+}

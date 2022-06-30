@@ -113,3 +113,10 @@ li:nth-child(3n-1) {
 .container:hover {
     cursor: pointer;
 }
+.escondido {
+    display: none;
+}
+
+/**menor que 1052 trocar flex start por center**/
+
+@
