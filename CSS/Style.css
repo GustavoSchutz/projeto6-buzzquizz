@@ -81,7 +81,8 @@ margin-top: 77px;
 
 }
 .container img {
-    display: block;
+    width: 340px;
+    height: 181px;
 }
 .container .text {
     display: flex;
@@ -189,3 +190,8 @@ button:hover{
 h4, h5{
 
 }
+.escondido {
+    display: none;
+}
+
+/**menor que 1052 trocar flex start por center**/

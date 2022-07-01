@@ -1,3 +1,5 @@
+let quiz;
+
 function criacaoDeQuizz (){
     document.querySelector(".tela1").classList.add(".apaga");
     document.querySelector(".tela3").classList.remove(".apaga");
@@ -16,6 +18,36 @@ function getQuizzlist() {
     promessa.catch(alerError);
 }
 function writeQuizzlist(quizzList) {
-    console.log(quizzList.data);
+    quiz = quizzList.data;
+    console.log(quizzList.data)
+    renderizarQuiz()
 }
 getQuizzlist()
+
+function paginaQuizz(){
+    let tela1 = document.getElementById("tela1");
+    tela1.classList.toggle("escondido");
+}
+
+function renderizarQuiz() {
+
+    const container = document.querySelector(".listagem")
+  container.innerHTML = '';
+
+  for (let i = 0; i < quiz.length; i++) {
+
+      container.innerHTML += `
+    <li class ="${quiz[i].id}">
+    <div class="container" onclick="paginaQuizz()">
+    <img src="${quiz[i].image}" alt="">
+    <div class="text">
+        <h3>
+         ${quiz[i].title}
+        </h3>
+    </div>
+    <div class="gradient"></div>
+</div>
+  </li>
+`;
+}
+}
