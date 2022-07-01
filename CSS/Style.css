@@ -81,7 +81,8 @@ margin-top: 77px;
 
 }
 .container img {
-    display: block;
+    width: 340px;
+    height: 181px;
 }
 .container .text {
     display: flex;
@@ -130,5 +131,3 @@ li:nth-child(3n-1) {
 }
 
 /**menor que 1052 trocar flex start por center**/
-
-@
