@@ -51,3 +51,15 @@ function renderizarQuiz() {
 `;
 }
 }
+function tela3a() {
+    let isValidTitle = tituloDoQuiz.checkValidity();
+    let isValidImageURL = imagemDoQuiz.checkValidity();
+    let isValidQuestionAmount = quantidadePerguntas.checkValidity();
+    let isValidLevelAmount = quantidadeNiveis.checkValidity();
+    if (isValidTitle && isValidImageURL && isValidQuestionAmount && isValidLevelAmount) {
+        console.log('deucerto')
+    }else {
+        alert("Dados não estão certos")
+        document.getElementById("tituloDoQuiz").toggleClass(".errou")
+    }
+}

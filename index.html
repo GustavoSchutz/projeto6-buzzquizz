@@ -116,11 +116,11 @@
             <h4>Comece pelo começo</h4>
             <div class="criandoOQuizz">
                 
-                <input minlength="20" maxlength="65" type="text" placeholder="Título do seu quizz">
-                <input type="url" placeholder="URL da imagem do seu quizz">
-                <input type="number" min="3" placeholder="Quantidade de perguntas do quizz">
+                <input minlength="20" maxlength="65" type="text" id="tituloDoQuiz" placeholder="Título do seu quizz" required>
+                <input type="url" id="imagemDoQuiz" placeholder="URL da imagem do seu quizz" required>
+                <input type="number" min="3" id="quantidadePerguntas" placeholder="Quantidade de perguntas do quizz" required>
                 <!-- precisa de um javascript que tenha um for e adicione o template 'div pergunta' o número de vezes que é pedido -->
-                <input type="number" min="2" placeholder="Quantidade de níveis do quizz">
+                <input type="number" min="2" id="quantidadeNiveis" placeholder="Quantidade de níveis do quizz" required>
                 <!-- igual a de perguntas -->
                 <button class="prosseguir" onclick="tela3a()">Prosseguir para criar pergunta</button>
                 <!-- guardar as informações em variáveis globais -->
