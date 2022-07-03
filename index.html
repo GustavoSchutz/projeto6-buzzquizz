@@ -16,7 +16,7 @@
 <body>
 
     <div class="topo">BuzzQuizz</div>
-    <Section class="tela1" id="tela1">
+    <Section class="tela1 apaga" id="tela1">
         <div class="criaQuizz">
             <h2>Vocês não criou nenhum quizz ainda :(</h2>
             <button class="botaoDeCriar" onclick="criacaoDeQuizz()">Criar Quizz</div>
@@ -110,39 +110,94 @@
     <section class="tela2">
 
     </section>
-    <section class="tela3 apaga">
+    <section class="tela3">
+        <section class="tela3a">
             <div class="criandoOQuizz">
                 <h3>Comece pelo começo</h3>
-                <input type="text" placeholder="Título do seu quizz">
-                <input type="text" placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
-                <button class="prosseguir">Prosseguir para criar pergunta</button>
+                <input minlength="20" maxlength="65" type="text" placeholder="Título do seu quizz">
+                <input type="url" placeholder="URL da imagem do seu quizz">
+                <input type="number" min="3" placeholder="Quantidade de perguntas do quizz">
+                <!-- precisa de um javascript que tenha um for e adicione o template 'div pergunta' o número de vezes que é pedido -->
+                <input type="number" min="2" placeholder="Quantidade de níveis do quizz">
+                <!-- igual a de perguntas -->
+                <button class="prosseguir" onclick="tela3a()">Prosseguir para criar pergunta</button>
+                <!-- guardar as informações em variáveis globais -->
             </div>
-    </section>
+        </section>
+    
 
-    <section class="tela3-1 apaga">
-        <div class="criandoPerguntas">
-            <h3>Crise suas perguntas</h3>
-            <h4>Pergunta 1</h4>
-            <input type="text" placeholder="Texto da pergunta">
-            <input type="text" placeholder="Cor de fundo da pergunta">
-            <h4>Resposta Correta</h4>
-            <input type="text" placeholder="Resposta correta">
-            <input type="text" placeholder="URL da imagem">
-            <h4>Respostas incorretas</h4>
-            <input type="text" placeholder="Resposta incorreta 1">
-            <input type="text" placeholder="URL da imagem 1">
-            <input type="text" placeholder="Resposta incorreta 2">
-            <input type="text" placeholder="URL da imagem 2">
-            <input type="text" placeholder="Resposta incorreta 3">
-            <input type="text" placeholder="URL da imagem 3">       
-            <h5>Pergunta 2</h5>
-            <h5>Pergunta 3</h5>     
-            <button class="prosseguir">Prosseguir para criar pergunta</button>
+        <section class="tela3b">
+            <div class="criandoPerguntas">
+                <h3>Crie suas perguntas</h3>
+                
+                <div id="igualaocontador" class="pergunta">
+                    <h4>Pergunta 1</h4>
+                    <input type="text" placeholder="Texto da pergunta">
+                    <input type="color" placeholder="Cor de fundo da pergunta">
+                    <h4>Resposta Correta</h4>
+                    <input type="text" placeholder="Resposta correta">
+                    <input type="text" placeholder="URL da imagem">
+                    <h4>Respostas incorretas</h4>
+                    <input type="text" placeholder="Resposta incorreta 1">
+                    <input type="text" placeholder="URL da imagem 1">
+                    <input type="text" placeholder="Resposta incorreta 2">
+                    <input type="text" placeholder="URL da imagem 2">
+                    <input type="text" placeholder="Resposta incorreta 3">
+                    <input type="text" placeholder="URL da imagem 3">    
+                    
+                </div>
+                <div id="igualaocontador" class="pergunta">
+                    <h4>Pergunta 1</h4>
+                    <input type="text" placeholder="Texto da pergunta">
+                    <input type="color" placeholder="Cor de fundo da pergunta">
+                    <h4>Resposta Correta</h4>
+                    <input type="text" placeholder="Resposta correta">
+                    <input type="text" placeholder="URL da imagem">
+                    <h4>Respostas incorretas</h4>
+                    <input type="text" placeholder="Resposta incorreta 1">
+                    <input type="text" placeholder="URL da imagem 1">
+                    <input type="text" placeholder="Resposta incorreta 2">
+                    <input type="text" placeholder="URL da imagem 2">
+                    <input type="text" placeholder="Resposta incorreta 3">
+                    <input type="text" placeholder="URL da imagem 3">    
+                    
+                </div>
+                
+                <button class="prosseguir" onclick="tela3b()">Prosseguir para criar níveis</button>
+
+            </div>
+
+        </section>
+        <section class="tela3c">
+            <div class="criandoNiveis">
+                <h3>Agora, decida os níveis!</h3>
+                <div class="nivel">
+                    <input type="text" minlength="10" placeholder="Título do nível">
+                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
+                    <input type="url" placeholder="URL da imagem do nível">
+                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
+                </div>
+                <div class="nivel">
+                    <input type="text" minlength="10" placeholder="Título do nível">
+                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
+                    <input type="url" placeholder="URL da imagem do nível">
+                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
+                </div>
+                <button class="prosseguir" onclick="tela3b()">Prosseguir </button>
+            </div>
             
-        </div>
-</section>
+        </section>
+        <section class="tela3d">
+            <div class="sucessoQuiz">
+                <div class="nivel">
+                    <input type="text" minlength="10" placeholder="Título do nível">
+                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
+                    <input type="url" placeholder="URL da imagem do nível">
+                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
+                </div>
+            </div>
+        </section>
+    </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

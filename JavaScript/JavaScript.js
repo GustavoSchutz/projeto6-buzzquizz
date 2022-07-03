@@ -41,9 +41,9 @@ function renderizarQuiz() {
     <div class="container" onclick="paginaQuizz()">
     <img src="${quiz[i].image}" alt="">
     <div class="text">
-        <h3>
+        <h6>
          ${quiz[i].title}
-        </h3>
+        </h6>
     </div>
     <div class="gradient"></div>
 </div>
