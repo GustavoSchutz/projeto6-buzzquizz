@@ -112,8 +112,9 @@
     </section>
     <section class="tela3">
         <section class="tela3a">
+            <h4>Comece pelo começo</h4>
             <div class="criandoOQuizz">
-                <h3>Comece pelo começo</h3>
+                
                 <input minlength="20" maxlength="65" type="text" placeholder="Título do seu quizz">
                 <input type="url" placeholder="URL da imagem do seu quizz">
                 <input type="number" min="3" placeholder="Quantidade de perguntas do quizz">
@@ -128,7 +129,7 @@
 
         <section class="tela3b">
             <div class="criandoPerguntas">
-                <h3>Crie suas perguntas</h3>
+                <h4>Crie suas perguntas</h4>
                 
                 <div id="igualaocontador" class="pergunta">
                     <h4>Pergunta 1</h4>
@@ -170,14 +171,16 @@
         </section>
         <section class="tela3c">
             <div class="criandoNiveis">
-                <h3>Agora, decida os níveis!</h3>
+                <h4>Agora, decida os níveis!</h4>
                 <div class="nivel">
+                    <h4>Nível 1</h4>
                     <input type="text" minlength="10" placeholder="Título do nível">
                     <input type="number" min="0" max="100" placeholder="% de acerto mínima">
                     <input type="url" placeholder="URL da imagem do nível">
                     <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
                 </div>
                 <div class="nivel">
+                    <h4>Nível 2</h4>
                     <input type="text" minlength="10" placeholder="Título do nível">
                     <input type="number" min="0" max="100" placeholder="% de acerto mínima">
                     <input type="url" placeholder="URL da imagem do nível">
@@ -189,12 +192,15 @@
         </section>
         <section class="tela3d">
             <div class="sucessoQuiz">
-                <div class="nivel">
-                    <input type="text" minlength="10" placeholder="Título do nível">
-                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
-                    <input type="url" placeholder="URL da imagem do nível">
-                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
+                <div class="sucesso">
+                    <h4>Seu quizz está pronto!</h4>
+                    <div class="quizCriado">
+
+                    </div>
+                    
                 </div>
+                <button class="prosseguir acessarQuiz" onclick="tela3b()">Prosseguir </button>
+                    <p class="voltarHome"></p>
             </div>
         </section>
     </section>
