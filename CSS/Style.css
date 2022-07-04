@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, .nivel{
     font-weight: 700;
 }
 
-/* Estilo da tela 3 */
+/* Estilo da tela 3 :) */
 
 .tela3 {
 
@@ -166,7 +166,7 @@ input, textarea{
     border-radius: 5px;
     font-style: italic;
     width: 90vw;
-    max-width: 600px;
+    max-width: calc(600px - 3rem);
     padding: 5px 5px;
     justify-content: center;
     align-items: center;
@@ -219,6 +219,8 @@ button:hover{
 .botaoTartaruga {
     display: flex;
     justify-content: space-around;
+    max-width: calc(600px);
+    margin-top: 2rem;
 }
 
 

@@ -5,6 +5,7 @@ let novoQuiz = {};
 let tituloQuiz;
 let urlDaImagemQuiz;
 
+// umhelp
 
 
 
@@ -87,6 +88,7 @@ function gerarPerguntas() {
 function geradorPerguntas() {
     console.log("gerou?")
     console.log(qtdPerguntas)
+    
     const perguntas = document.querySelector(".criandoPerguntas");
     perguntas.innerHTML = '';
   
@@ -152,8 +154,35 @@ function geradorNiveis() {
 
 function tela3b() {
 // essa função vai guardar os preenchimentos de anteriores em variaveis e dará push para o array que será enviado para a API
-
+    geradorObjetosPergunta()
 }
+function geradorObjetosPergunta() {
+    const objeto = document.querySelector(".objetoSecreto");
+
+
+    for (let i = 1; i <= qtdPerguntas; i++) {
+        let tituloPergunta = "textoPergunta" + i;
+        
+        `{
+            title: ${tituloPergunta},
+            color: "#123456",
+            answers: [
+                {
+                    text: "Texto da resposta 1",
+                    image: "https://http.cat/411.jpg",
+                    isCorrectAnswer: true
+                },
+                {
+                    text: "Texto da resposta 2",
+                    image: "https://http.cat/412.jpg",
+                    isCorrectAnswer: false
+                }
+            ]
+        },`
+    }
+    console.log(objeto.innerHTML)
+}
+
 function iniciarObj() {
     let novoQuizObj = {
         title: tituloQuiz,
