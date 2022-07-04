@@ -5,20 +5,6 @@ function criacaoDeQuizz (){
     document.querySelector(".tela3").classList.remove("apaga");
 }
 
-function verificaDadosQuizz (){
-    let qtdPerguntas = Number(document.querySelector(".quantidade-perguntas"));
-    let qtdNiveis = Number(document.querySelector(".qtdNiveis"));
-    let tituloQuizz = document.querySelector(".tituloQuizz");
-    let tamanhoTitulo = tituloQuizz.length;
-    let urlQuizz = document.querySelector(".urlQuizz")
-
-    if (qtdPerguntas >= 3 && qtdNiveis >= 2 && (tamanhoTitulo >= 20 && tamanhoTitulo <= 65)) {
-        prosseguirParaPergunta()
-    } else {
-        alert ("Preencha os dados corretamente");
-    }
-}
-
 function prosseguirParaPergunta(){
     document.querySelector(".tela3").classList.add("apaga");
     document.querySelector(".tela3pergunta").classList.remove("apaga");
@@ -74,7 +60,8 @@ function tela3a() {
     let isValidQuestionAmount = quantidadePerguntas.checkValidity();
     let isValidLevelAmount = quantidadeNiveis.checkValidity();
     if (isValidTitle && isValidImageURL && isValidQuestionAmount && isValidLevelAmount) {
-        console.log('deucerto')
+        console.log('deucerto');
+        criacaoDeQuizz ()
     }else {
         alert("Dados não estão certos")
         document.getElementById("tituloDoQuiz").toggleClass(".errou")
