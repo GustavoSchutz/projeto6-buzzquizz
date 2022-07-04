@@ -129,44 +129,35 @@
     
 
         <section class="tela3b">
+            <h4>Crie suas perguntas</h4>
             <div class="criandoPerguntas">
-                <h4>Crie suas perguntas</h4>
+               
                 
-                <div id="igualaocontador" class="pergunta">
-                    <h4>Pergunta 1</h4>
-                    <input type="text" placeholder="Texto da pergunta">
-                    <input type="color" placeholder="Cor de fundo da pergunta">
-                    <h4>Resposta Correta</h4>
-                    <input type="text" placeholder="Resposta correta">
-                    <input type="text" placeholder="URL da imagem">
-                    <h4>Respostas incorretas</h4>
-                    <input type="text" placeholder="Resposta incorreta 1">
-                    <input type="text" placeholder="URL da imagem 1">
-                    <input type="text" placeholder="Resposta incorreta 2">
-                    <input type="text" placeholder="URL da imagem 2">
-                    <input type="text" placeholder="Resposta incorreta 3">
-                    <input type="text" placeholder="URL da imagem 3">    
-                    
-                </div>
-                <div id="igualaocontador" class="pergunta">
-                    <h4>Pergunta 1</h4>
-                    <input type="text" placeholder="Texto da pergunta">
-                    <input type="color" placeholder="Cor de fundo da pergunta">
-                    <h4>Resposta Correta</h4>
-                    <input type="text" placeholder="Resposta correta">
-                    <input type="text" placeholder="URL da imagem">
-                    <h4>Respostas incorretas</h4>
-                    <input type="text" placeholder="Resposta incorreta 1">
-                    <input type="text" placeholder="URL da imagem 1">
-                    <input type="text" placeholder="Resposta incorreta 2">
-                    <input type="text" placeholder="URL da imagem 2">
-                    <input type="text" placeholder="Resposta incorreta 3">
-                    <input type="text" placeholder="URL da imagem 3">    
-                    
+                <div id="pergunta${i}" class="pergunta">
+                    <div class="botaoTartaruga">
+                        <h4>Pergunta ${i}</h4>
+                        <span>teste</span>
+                    </div>
+                    <div class="tartaruga">
+                        <input id="textoPergunta${i}" minlength="20" type="text" placeholder="Texto da pergunta" required>
+                        <input id="cor${i}" type="color" placeholder="Cor de fundo da pergunta" required>
+                        <h4>Resposta Correta</h4>
+                        <input id="respostaCorretaPergunta${i}" type="text" placeholder="Resposta correta" required>
+                        <input id="imagemCorreta${i}" type="url" placeholder="URL da imagem" required>
+                        <h4>Respostas incorretas</h4>
+                        <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 1" required>
+                        <input type="url" placeholder="URL da imagem 1" required>
+                        <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 2">
+                        <input type="url" placeholder="URL da imagem 2">
+                        <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 3">
+                        <input type="url" placeholder="URL da imagem 3">    
+                    </div>
+                    <div class="botao">
+                        <button class="prosseguir" onclick="tela3b()">Prosseguir para criar níveis</button>
+                    </div>
                 </div>
                 
-                <button class="prosseguir" onclick="tela3b()">Prosseguir para criar níveis</button>
-
+                
             </div>
 
         </section>
@@ -174,8 +165,8 @@
             <div class="criandoNiveis">
                 <h4>Agora, decida os níveis!</h4>
                 <div class="nivel">
-                    <h4>Nível 1</h4>
-                    <input type="text" minlength="10" placeholder="Título do nível">
+                    <h4>Nível x</h4>
+                    <input id="tituloNivelx" type="text" minlength="10" placeholder="Título do nível">
                     <input type="number" min="0" max="100" placeholder="% de acerto mínima">
                     <input type="url" placeholder="URL da imagem do nível">
                     <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
