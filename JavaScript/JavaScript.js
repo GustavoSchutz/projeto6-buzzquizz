@@ -3,15 +3,18 @@ let qtdPerguntas;
 let qtdNiveis;
 
 function criacaoDeQuizz (){
-    document.querySelector(".tela1").classList.add(".apaga");
-    document.querySelector(".tela3").classList.remove(".apaga");
-    console.log("ola")
+    document.querySelector(".tela1").classList.add("apaga");
+    document.querySelector(".tela3").classList.remove("apaga");
 }
 
 function prosseguirParaPergunta(){
-    document.querySelector(".tela1").classList.add(".apaga");
-    document.querySelector(".tela3").classList.add(".apaga");
-    document.querySelector(".tela3-1").classList.remove(".apaga");
+    document.querySelector(".tela3").classList.add("apaga");
+    document.querySelector(".tela3pergunta").classList.remove("apaga");
+}
+
+function prosseguirParaNiveis(){
+    document.querySelector(".tela3pergunta").classList.add("apaga");
+    document.querySelector(".tela3niveis").classList.remove("apaga");
 }
 
 function getQuizzlist() {
@@ -61,7 +64,12 @@ function tela3a() {
     let isValidQuestionAmount = quantidadePerguntas.checkValidity();
     let isValidLevelAmount = quantidadeNiveis.checkValidity();
     if (isValidTitle && isValidImageURL && isValidQuestionAmount && isValidLevelAmount) {
+<<<<<<< HEAD
         gerarPerguntas();
+=======
+        console.log('deucerto');
+        criacaoDeQuizz ()
+>>>>>>> 7d64e50b044f544ddf00c9453a8102fd537d5e03
     }else {
         alert("Dados não estão certos");
         // document.getElementById("tituloDoQuiz").toggleClass(".errou") rodar audio do faustao

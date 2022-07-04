@@ -139,7 +139,9 @@ li:nth-child(3n-1) {
     display: none;
 }
 
-
+h1, h2, h3, h4, h5, .nivel{
+    font-weight: 700;
+}
 
 /* Estilo da tela 3 */
 
@@ -250,5 +252,11 @@ h4 {
     align-items: center;
 }
 
+
+.nivel{
+    display: flex;
+    justify-content: space-between;
+    width: 40.5%;
+}
 
 /**menor que 1052 trocar flex start por center**/
