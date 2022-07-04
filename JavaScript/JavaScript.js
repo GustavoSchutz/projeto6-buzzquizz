@@ -58,13 +58,25 @@ function renderizarQuiz() {
     <div class="container" onclick="paginaQuizz()">
     <img src="${quiz[i].image}" alt="">
     <div class="text">
-        <h3>
+        <h6>
          ${quiz[i].title}
-        </h3>
+        </h6>
     </div>
     <div class="gradient"></div>
 </div>
   </li>
 `;
 }
+}
+function tela3a() {
+    let isValidTitle = tituloDoQuiz.checkValidity();
+    let isValidImageURL = imagemDoQuiz.checkValidity();
+    let isValidQuestionAmount = quantidadePerguntas.checkValidity();
+    let isValidLevelAmount = quantidadeNiveis.checkValidity();
+    if (isValidTitle && isValidImageURL && isValidQuestionAmount && isValidLevelAmount) {
+        console.log('deucerto')
+    }else {
+        alert("Dados não estão certos")
+        document.getElementById("tituloDoQuiz").toggleClass(".errou")
+    }
 }
