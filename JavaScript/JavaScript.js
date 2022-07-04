@@ -64,12 +64,7 @@ function tela3a() {
     let isValidQuestionAmount = quantidadePerguntas.checkValidity();
     let isValidLevelAmount = quantidadeNiveis.checkValidity();
     if (isValidTitle && isValidImageURL && isValidQuestionAmount && isValidLevelAmount) {
-<<<<<<< HEAD
         gerarPerguntas();
-=======
-        console.log('deucerto');
-        criacaoDeQuizz ()
->>>>>>> 7d64e50b044f544ddf00c9453a8102fd537d5e03
     }else {
         alert("Dados não estão certos");
         // document.getElementById("tituloDoQuiz").toggleClass(".errou") rodar audio do faustao
@@ -81,7 +76,7 @@ function gerarPerguntas() {
     qtdNiveis = document.getElementById("quantidadeNiveis").value;
 
     geradorPerguntas();
-    // geradorNiveis();
+    geradorNiveis();
 }
 function geradorPerguntas() {
     console.log("gerou?")
@@ -95,7 +90,7 @@ function geradorPerguntas() {
         <div id="pergunta${i}" class="pergunta">
                     <div class="botaoTartaruga">
                         <h4>Pergunta ${i}</h4>
-                        <span>teste</span>
+                        <span><ion-icon name="create-outline"></ion-icon></span>
                     </div>
                     <div class="tartaruga">
                         <input id="textoPergunta${i}" minlength="20" type="text" placeholder="Texto da pergunta" required>
@@ -105,11 +100,11 @@ function geradorPerguntas() {
                         <input id="imagemCorreta${i}" type="url" placeholder="URL da imagem" required>
                         <h4>Respostas incorretas</h4>
                         <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 1" required>
-                        <input type="url" placeholder="URL da imagem 1" required>
+                        <input id="imagemIncorreta${i}a" type="url" placeholder="URL da imagem 1" required>
                         <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 2">
-                        <input type="url" placeholder="URL da imagem 2">
+                        <input id="imagemIncorreta${i}b" type="url" placeholder="URL da imagem 2">
                         <input id="respostaIncorreta${i}" type="text" placeholder="Resposta incorreta 3">
-                        <input type="url" placeholder="URL da imagem 3">    
+                        <input id="imagemIncorreta${i}c" type="url" placeholder="URL da imagem 3">    
                     </div>
                     
                 </div>
@@ -119,7 +114,37 @@ function geradorPerguntas() {
   perguntas.innerHTML += `<button class="prosseguir" onclick="tela3b()">Prosseguir para criar níveis</button>`;
 
 }
+function geradorNiveis() {
+    console.log("gerouniveis?");
+    console.log(qtdNiveis);
+    const niveis = document.querySelector("#criandoNiveis");
+    niveis.innerHTML = '';
+  
+    for (let i = 1; i <= qtdNiveis; i++) {
+  
+        niveis.innerHTML += `
+        <div id="nivel${i}" class="pergunta">
+                    <div class="botaoTartaruga">
+                        <h4>Nível ${i}</h4>
+                        <span><ion-icon name="create-outline"></ion-icon></span>
+                    </div>
+                    
+                    <div class="tartaruga">
+                        <input id="tituloNivel${i}" type="text" minlength="10" placeholder="Título do nível">
+                        <input id="acertoMin${i}" type="number" min="0" max="100" placeholder="% de acerto mínima">
+                        <input id="imgNivel${i}" type="url" placeholder="URL da imagem do nível">
+                        <textarea id="descricaoNivel${i}" class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível"></textarea>
+                    </div>
+                </div>
+  `;
+  }
+
+  niveis.innerHTML += `<button class="prosseguir" onclick="tela3b()">Prosseguir </button>`;
+
+}
+
 
 function tela3b() {
+// essa função vai guardar os preenchimentos de anteriores em variaveis e dará push para o array que será enviado para a API
 
 }

@@ -157,7 +157,7 @@ h3{
     color: #000000;
     margin-bottom: 45px;
 }
-input{
+input, textarea{
     font-size: 1rem;
     height: 1.8rem;
     color: #0e0d0dd5;
@@ -172,6 +172,9 @@ input{
     align-items: center;
     margin-bottom: 9px;
     opacity: 0.8;
+}
+.textoGrande {
+    height: 5rem;
 }
 
 /* .criandoOQuizz{
@@ -200,7 +203,7 @@ button:hover{
     cursor: pointer;
 }
 
-.criandoPerguntas, .pergunta, .criandoNiveis, .sucessoQuiz, .nivel, .tela3a, .criandoOQuizz, .tela3b, .botao {
+.criandoPerguntas, .pergunta, .criandoNiveis, .sucessoQuiz, .nivel, .tela3a, .criandoOQuizz, .tela3b, .botao, .tela3c {
 
     display: flex;
     flex-direction: column;

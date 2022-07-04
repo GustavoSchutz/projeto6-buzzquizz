@@ -136,7 +136,7 @@
                 <div id="pergunta${i}" class="pergunta">
                     <div class="botaoTartaruga">
                         <h4>Pergunta ${i}</h4>
-                        <span>teste</span>
+                        <span><ion-icon name="create-outline"></ion-icon></span>
                     </div>
                     <div class="tartaruga">
                         <input id="textoPergunta${i}" minlength="20" type="text" placeholder="Texto da pergunta" required>
@@ -162,21 +162,20 @@
 
         </section>
         <section class="tela3c">
-            <div class="criandoNiveis">
-                <h4>Agora, decida os níveis!</h4>
-                <div class="nivel">
-                    <h4>Nível x</h4>
-                    <input id="tituloNivelx" type="text" minlength="10" placeholder="Título do nível">
-                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
-                    <input type="url" placeholder="URL da imagem do nível">
-                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
-                </div>
-                <div class="nivel">
-                    <h4>Nível 2</h4>
-                    <input type="text" minlength="10" placeholder="Título do nível">
-                    <input type="number" min="0" max="100" placeholder="% de acerto mínima">
-                    <input type="url" placeholder="URL da imagem do nível">
-                    <input class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível">
+            <h4>Agora, decida os níveis!</h4>
+            <div id="criandoNiveis" class="criandoPerguntas">
+                <div id="nivel${i}" class="pergunta">
+                    <div class="botaoTartaruga">
+                        <h4>Nível ${i}</h4>
+                        <span><ion-icon name="create-outline"></ion-icon></span>
+                    </div>
+                    
+                    <div class="tartaruga">
+                        <input id="tituloNivel${i}" type="text" minlength="10" placeholder="Título do nível">
+                        <input id="acertoMin${i}" type="number" min="0" max="100" placeholder="% de acerto mínima">
+                        <input id="imgNivel${i}" type="url" placeholder="URL da imagem do nível">
+                        <textarea id="descricaoNivel${i}" class="textoGrande" type="text" minlength="30" placeholder="Descrição do nível"></textarea>
+                    </div>    
                 </div>
                 <button class="prosseguir" onclick="tela3b()">Prosseguir </button>
             </div>
