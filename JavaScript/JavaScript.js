@@ -1,15 +1,20 @@
 let quiz;
 
 function criacaoDeQuizz (){
-    document.querySelector(".tela1").classList.add(".apaga");
-    document.querySelector(".tela3").classList.remove(".apaga");
+    document.querySelector(".tela1").classList.add("apaga");
+    document.querySelector(".tela3").classList.remove("apaga");
     console.log("ola")
 }
 
 function prosseguirParaPergunta(){
-    document.querySelector(".tela1").classList.add(".apaga");
-    document.querySelector(".tela3").classList.add(".apaga");
-    document.querySelector(".tela3-1").classList.remove(".apaga");
+    document.querySelector(".tela1").classList.add("apaga");
+    document.querySelector(".tela3").classList.add("apaga");
+    document.querySelector(".tela3pergunta").classList.remove("apaga");
+}
+
+function prosseguirParaNiveis(){
+    document.querySelector(".tela3pergunta").classList.add("apaga");
+    document.querySelector(".tela3niveis").classList.remove("apaga");
 }
 
 function getQuizzlist() {

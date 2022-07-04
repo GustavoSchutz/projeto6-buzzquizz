@@ -133,7 +133,9 @@ li:nth-child(3n-1) {
     display: none;
 }
 
-
+h1, h2, h3, h4, h5, .nivel{
+    font-weight: 700;
+}
 
 /* Estilo da tela 3 */
 
@@ -180,18 +182,25 @@ button:hover{
     cursor: pointer;
 }
 
-.criandoPerguntas{
+.criarPerguntas{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-h4, h5{
-
+.tela3niveis{
+    
 }
+
 .escondido {
     display: none;
+}
+
+.nivel{
+    display: flex;
+    justify-content: space-between;
+    width: 40.5%;
 }
 
 /**menor que 1052 trocar flex start por center**/
