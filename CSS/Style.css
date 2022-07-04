@@ -190,7 +190,10 @@ button:hover{
 }
 
 .tela3niveis{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .escondido {

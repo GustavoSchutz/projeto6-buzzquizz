@@ -3,11 +3,23 @@ let quiz;
 function criacaoDeQuizz (){
     document.querySelector(".tela1").classList.add("apaga");
     document.querySelector(".tela3").classList.remove("apaga");
-    console.log("ola")
+}
+
+function verificaDadosQuizz (){
+    let qtdPerguntas = Number(document.querySelector(".quantidade-perguntas"));
+    let qtdNiveis = Number(document.querySelector(".qtdNiveis"));
+    let tituloQuizz = document.querySelector(".tituloQuizz");
+    let tamanhoTitulo = tituloQuizz.length;
+    let urlQuizz = document.querySelector(".urlQuizz")
+
+    if (qtdPerguntas >= 3 && qtdNiveis >= 2 && (tamanhoTitulo >= 20 && tamanhoTitulo <= 65)) {
+        prosseguirParaPergunta()
+    } else {
+        alert ("Preencha os dados corretamente");
+    }
 }
 
 function prosseguirParaPergunta(){
-    document.querySelector(".tela1").classList.add("apaga");
     document.querySelector(".tela3").classList.add("apaga");
     document.querySelector(".tela3pergunta").classList.remove("apaga");
 }

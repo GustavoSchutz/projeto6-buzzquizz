@@ -113,11 +113,11 @@
     <section class="tela3 apaga">
             <div class="criandoOQuizz">
                 <h3>Comece pelo começo</h3>
-                <input type="text" placeholder="Título do seu quizz">
-                <input type="text" placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
-                <button class="prosseguir"  onclick="prosseguirParaPergunta()">Prosseguir para criar pergunta</button>
+                <input type="text" class="tituloQuizz" placeholder="Título do seu quizz">
+                <input type="text" class="urlQuizz" placeholder="URL da imagem do seu quizz">
+                <input type="text" class="qtdPerguntas" placeholder="Quantidade de perguntas do quizz">
+                <input type="text" class="qtdNiveis" placeholder="Quantidade de níveis do quizz">
+                <button class="prosseguir"  onclick="verificaDadosQuizz()">Prosseguir para criar pergunta</button>
             </div>
     </section>
 
@@ -148,18 +148,17 @@
         <div class="criarNiveis">
             <h3>Agora, decida os níveis</h3>
             <h4>Nível 1</h4>
-            <div class="descricaoDoNivel">
-                <input type="text" placeholder="Título do nível">
-                <input type="text" placeholder="% de acerto mínima">
-                <input type="text" placeholder="URL da imagem do nível">
-                <input type="text" placeholder="Descrição do nível">
-            </div>
+            <input type="text" name="tituloNivel" placeholder="Título do nível">
+            <input type="text" name="acertoMinimo" placeholder="% de acerto mínima">
+            <input type="text" name="urlImgNivel" placeholder="URL da imagem do nível">
+            <input type="text" name="descricaoNivel" placeholder="Descrição do nível">
             <div class="nivel">Nível 2 <ion-icon name="create-outline"></ion-icon></div>
             <div class="nivel">Nível 3 <ion-icon name="create-outline"></ion-icon></div>
             <button class="prosseguir" onclick="finzalizarQuizz()">Finzalizar Quizz</button>
         </div>
     </section>
 
+    
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
