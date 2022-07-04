@@ -1,6 +1,8 @@
 let quiz;
 let qtdPerguntas;
 let qtdNiveis;
+let novoQuiz = {};
+let tituloQuiz;
 
 function criacaoDeQuizz (){
     document.querySelector(".tela1").classList.add("apaga");
@@ -72,7 +74,7 @@ function tela3a() {
 }
 function gerarPerguntas() {
     qtdPerguntas = document.getElementById("quantidadePerguntas").value;
-
+    tituloQuiz = document.getElementById("tituloDoQuiz").value;
     qtdNiveis = document.getElementById("quantidadeNiveis").value;
 
     geradorPerguntas();
@@ -140,11 +142,82 @@ function geradorNiveis() {
   }
 
   niveis.innerHTML += `<button class="prosseguir" onclick="tela3b()">Prosseguir </button>`;
-
+  iniciarObj()
 }
 
 
 function tela3b() {
 // essa função vai guardar os preenchimentos de anteriores em variaveis e dará push para o array que será enviado para a API
 
+}
+function iniciarObj() {
+    let novoQuizObj = {
+        title: tituloQuiz,
+        image: "https://http.cat/411.jpg",
+        questions: [
+            {
+                title: "Título da pergunta 1",
+                color: "#123456",
+                answers: [
+                    {
+                        text: "Texto da resposta 1",
+                        image: "https://http.cat/411.jpg",
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: "Texto da resposta 2",
+                        image: "https://http.cat/412.jpg",
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: "Título da pergunta 2",
+                color: "#123456",
+                answers: [
+                    {
+                        text: "Texto da resposta 1",
+                        image: "https://http.cat/411.jpg",
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: "Texto da resposta 2",
+                        image: "https://http.cat/412.jpg",
+                        isCorrectAnswer: false
+                    }
+                ]
+            },
+            {
+                title: "Título da pergunta 3",
+                color: "#123456",
+                answers: [
+                    {
+                        text: "Texto da resposta 1",
+                        image: "https://http.cat/411.jpg",
+                        isCorrectAnswer: true
+                    },
+                    {
+                        text: "Texto da resposta 2",
+                        image: "https://http.cat/412.jpg",
+                        isCorrectAnswer: false
+                    }
+                ]
+            }
+        ],
+        levels: [
+            {
+                title: "Título do nível 1",
+                image: "https://http.cat/411.jpg",
+                text: "Descrição do nível 1",
+                minValue: 0
+            },
+            {
+                title: "Título do nível 2",
+                image: "https://http.cat/412.jpg",
+                text: "Descrição do nível 2",
+                minValue: 50
+            }
+        ]
+    }
+    console.log(novoQuizObj)
 }
