@@ -3,6 +3,10 @@ let qtdPerguntas;
 let qtdNiveis;
 let novoQuiz = {};
 let tituloQuiz;
+let urlDaImagemQuiz;
+
+
+
 
 function criacaoDeQuizz (){
     document.querySelector(".tela1").classList.add("apaga");
@@ -76,7 +80,7 @@ function gerarPerguntas() {
     qtdPerguntas = document.getElementById("quantidadePerguntas").value;
     tituloQuiz = document.getElementById("tituloDoQuiz").value;
     qtdNiveis = document.getElementById("quantidadeNiveis").value;
-
+    urlDaImagemQuiz = document.getElementById("imagemDoQuiz").value;
     geradorPerguntas();
     geradorNiveis();
 }
@@ -153,7 +157,7 @@ function tela3b() {
 function iniciarObj() {
     let novoQuizObj = {
         title: tituloQuiz,
-        image: "https://http.cat/411.jpg",
+        image: urlDaImagemQuiz,
         questions: [
             {
                 title: "Título da pergunta 1",
